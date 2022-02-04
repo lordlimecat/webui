@@ -1,0 +1,15 @@
+<ix-modal-header [title]="'IPMI System Event Log' | translate" [loading]="isFormLoading"></ix-modal-header>
+<mat-card>
+  <mat-card-content>
+    <pre>{{ipmiSelItems|json}}</pre>
+    <div class="form-actions">
+      <button
+        mat-button
+        type="submit"
+        [disabled]="isFormLoading"
+        (click)="onClearAll();"
+        color="primary"
+      >{{ 'Clear All Events' | translate }}</button>
+    </div>
+  </mat-card-content>
+</mat-card>
